@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" type="text/css" href="orstyle.css">
+</head>
+<body>
+    <form action="https://formsubmit.co/slsuls.ozbertsales@gmail.com" method="POST">
+        <h2>Order Form</h2>
+        <div class="product-info">
+            <img src="e.jpg" alt="Product Image">
+            <p class="price">PHP 48,000.00</p>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="Username" required>
+            <label>Username</label>
+        </div>
+        <div class="inputBox">
+            <input type="email" name="Email" required>
+            <label>Email</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="Address" required>
+            <label>Address</label>
+        </div>
+        <div class="inputBox">
+            <input type="number" name="Quantity" required>
+            <label>Quantity</label>
+        </div>
+        <div class="inputBox">
+            <input type="submit" value="Order">
+        </div>
+    </form>
+
+    <script>
+        document.querySelectorAll('label').forEach(label => {
+            label.innerHTML = label.innerText.split('').map((letter, i) =>
+                `<span style="transition-delay: ${i * 50}ms">${letter}</span>`
+            ).join('');
+        });
+    </script>
+</body>
+</html>
